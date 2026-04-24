@@ -1,0 +1,49 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<section class="hero hero-small">
+    <div class="page-shell">
+        <div class="hero-copy">
+            <p class="eyebrow">Profile Output</p>
+            <h1>Your LUMEN Results</h1>
+            <p class="hero-text">
+                Your result will show your strongest onboarding and communication style tendencies.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="page-shell result-layout" id="result-view">
+    <div class="glass-card">
+        <h2 id="primary-title">No Result Yet</h2>
+        <p id="primary-tagline">Complete the assessment first to view your profile.</p>
+        <p id="primary-summary"></p>
+    </div>
+
+    <div class="glass-card">
+        <h2>Score Breakdown</h2>
+        <div id="score-bars" class="score-bars"></div>
+    </div>
+
+    <div class="glass-card">
+        <h2>Primary Strengths</h2>
+        <ul id="strength-list" class="bullet-list"></ul>
+    </div>
+
+    <div class="glass-card">
+        <h2>Preferred Onboarding Style</h2>
+        <ul id="onboarding-list" class="bullet-list"></ul>
+    </div>
+
+    <div class="glass-card">
+        <h2>Manager Guidance</h2>
+        <ul id="manager-list" class="bullet-list"></ul>
+    </div>
+
+    <div class="glass-card">
+        <h2>Secondary Color</h2>
+        <p id="secondary-title"></p>
+        <p id="secondary-summary"></p>
+    </div>
+</section>
+{% endblock %}

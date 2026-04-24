@@ -1,0 +1,40 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<section class="hero hero-small">
+    <div class="page-shell">
+        <div class="hero-copy">
+            <p class="eyebrow">Onboarding Interpretation</p>
+            <h1>Profile Pathways</h1>
+            <p class="hero-text">
+                Each color profile can be used to shape communication style, onboarding pacing, and support strategy.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="page-shell">
+    <div class="pathway-grid">
+        {% for color, profile in profiles.items() %}
+        <article class="glass-card pathway-card">
+            <div class="pathway-heading">
+                <span class="color-dot" style="background-color: {{ profile.accent }};"></span>
+                <div>
+                    <h2>{{ profile.name }}</h2>
+                    <p>{{ profile.tagline }}</p>
+                </div>
+            </div>
+
+            <p>{{ profile.summary }}</p>
+
+            <h3>Best Onboarding Fit</h3>
+            <ul class="bullet-list">
+                {% for item in profile.onboarding_style %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
